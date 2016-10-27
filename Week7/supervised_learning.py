@@ -22,3 +22,11 @@ plot.show()
 # calculate Euclidean distance (straight-line distance between 2 points)
 def dist(x,y):
     return np.sqrt(np.sum((x - y)**2))
+
+num = len(x_train)
+# initialize a numpy array filled with zeros
+distance = np.zeros(num)
+# compute the distance from the test value to each training value and store into an output array
+for i in range(num):
+    distance[i] = dist(x_train[i], x_test)
+print(distance)

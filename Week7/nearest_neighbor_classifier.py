@@ -30,3 +30,12 @@ distance = np.zeros(num)
 for i in range(num):
     distance[i] = dist(x_train[i], x_test)
 print(distance)
+
+# Python's vectorization syntax is preferred because for loops tend to be slow in Python
+distance = np.sqrt(np.sum((x_train - x_test)**2, axis = 1))
+print(distance)
+
+# get the index of the minimum distance value
+min_index = np.argmin(distance)
+# print the color of the nearest neighbor point
+print(y_train[min_index])

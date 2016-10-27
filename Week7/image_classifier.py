@@ -37,3 +37,19 @@ for i in range(num):
 # get the index value of the minimum distance value
 min_index = np.argmin(distance)
 print(y_train[min_index])
+
+# Machine Learning algorithms improve their performance with the amount of training data they are exposed to
+x_train = digits.data[0:1000]
+y_train = digits.data[0:1000]
+# now we run the same code as above to count the errors the algorithm commits over the same test set
+num = len(x_train)
+no_errors = 0
+distance = np.zeros(num)
+for j in range(1697, 1797):
+    x_test = digits.data[j]
+    for i in range(num):
+        distance[i] = dist(x_train[i], x_test)
+    min_index = np.argmin(distance)
+    if y_train[min_index] != digits.target[j]:
+        no_errors += 1
+print(no_errors)

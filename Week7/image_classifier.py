@@ -3,7 +3,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import datasets
 
-# the digits dataset contains 1797 images representing handwritten digits
+"""
+Supervised learning example
+
+We have a dataset contains 1797 images representing handwritten digits.
+We will compute the distance between each training value and the test value and
+store in the distance array.
+The shortest distance will tell us which group the test data point is most similar to.
+"""
+
 digits = datasets.load_digits()
 # each element in the array digits.images is on its own a 8 by 8 array of pixels,
 # where each pixel is an integer between 0 and 16

@@ -1,5 +1,5 @@
 import numpy as np
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
 
 """
 In Supervised Learning, algorithms are trained on data labeled with a desired output.
@@ -14,18 +14,18 @@ x_train = np.array([[1,1], [2,2.5], [3,1.2], [5.5,6.3], [6,9], [7,6]])
 y_train = ['red', 'red', 'red', 'blue', 'blue', 'blue']
 
 # create plot with training data
-plot.figure()
-plot.scatter(x_train[:,0], x_train[:,1], s = 170, color = y_train[:])
-plot.show()
+plt.figure()
+plt.scatter(x_train[:,0], x_train[:,1], s = 170, color = y_train[:])
+plt.show()
 
 # create test point
 x_test = np.array([3,4])
 
 # add test point
-plot.figure()
-plot.scatter(x_train[:,0], x_train[:,1], s = 170, color = y_train[:])
-plot.scatter(x_test[0], x_test[1], s = 170, color = 'green')
-plot.show()
+plt.figure()
+plt.scatter(x_train[:,0], x_train[:,1], s = 170, color = y_train[:])
+plt.scatter(x_test[0], x_test[1], s = 170, color = 'green')
+plt.show()
 
 # calculate Euclidean distance (straight-line distance between 2 points)
 def dist(x,y):

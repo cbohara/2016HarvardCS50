@@ -1,6 +1,6 @@
 import scipy as sp
 import numpy as np
-import matplotlib.pyplot as plot
+import matplotlib.pyplot as plt
 from sklearn import datasets
 
 # the digits dataset contains 1797 images representing handwritten digits
@@ -9,9 +9,9 @@ digits = datasets.load_digits()
 # where each pixel is an integer between 0 and 16
 print(digits.images[0])
 
-plot.figure()
-plot.imshow(digits.images[0], cmap = plot.cm.gray_r, interpolation = 'nearest')
-plot.show()
+plt.figure()
+plt.imshow(digits.images[0], cmap = plt.cm.gray_r, interpolation = 'nearest')
+plt.show()
 
 # extract subset from original dataset
 x_train = digits.data[0:10]
@@ -20,9 +20,9 @@ y_train = digits.target[0:10]
 # run nearest neighbor classifier using test data point
 x_test = digits.data[345]
 
-plot.figure()
-plot.imshow(digits.images[345], cmap = plot.cm.gray_r, interpolation = 'nearest')
-plot.show()
+plt.figure()
+plt.imshow(digits.images[345], cmap = plt.cm.gray_r, interpolation = 'nearest')
+plt.show()
 
 # calculate Euclidean distance (straight-line distance between 2 points)
 def dist(x,y):

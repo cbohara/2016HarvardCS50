@@ -1,6 +1,14 @@
 import numpy as np
 import matplotlib.pyplot as plot
 
+"""
+In Supervised Learning, algorithms are trained on data labeled with a desired output.
+
+A typical application of Supervised Learning is classification, i.e., the task of
+classifying a new test data point into one of the possible categories that are
+present in the training data.
+"""
+
 # define numpy array of 2-dimensional points for training data
 x_train = np.array([[1,1], [2,2.5], [3,1.2], [5.5,6.3], [6,9], [7,6]])
 y_train = ['red', 'red', 'red', 'blue', 'blue', 'blue']

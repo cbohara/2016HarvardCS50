@@ -9,7 +9,7 @@ from sklearn.cluster import KMeans
 """
 Unsupervised learning example
 
-Cluster according to topic based on IMDb synopsis
+Cluster movies based on IMDb synopsis
 """
 
 # retreive google doc spreadsheet

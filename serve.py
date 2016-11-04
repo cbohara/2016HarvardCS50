@@ -13,5 +13,5 @@ port = 8080
 server_address = ("0.0.0.0", port)
 httpd = HTTPServer(server_address, HTTPServer_RequestHandler)
 
-# run server
+# run server and access via http://127.0.0.1:8080/
 httpd.serve_forever()

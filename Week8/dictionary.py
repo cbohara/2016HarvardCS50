@@ -14,5 +14,3 @@ class Dictionary:
 
     def size(self):
         return len(self.words)
-
-    
